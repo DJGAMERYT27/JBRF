@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Metodo de pago</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+
+    
+
+    
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+
+    <link href="form-compra.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="../b/imagen/logo.jpg" alt="" width="150" height="150">
+      <h2>Verificacion de metodo de pago</h2>
+      <p class="lead">Por favor en el siguiente apartado coloque sus datos personales y su metodo de pago que desa realizar la compra de nuestras plantas, Gracias por su atencion</p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-white">Su tarjeta</span>
+          <span class="badge bg-white rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3 bg-white">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Nombre del producto</h6>
+              <small class="text-muted">2 Palmeras</small>
+            </div>
+            <span class="text-muted">$200</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Segundo producto</h6>
+              <small class="text-muted">Nenufar Blanco</small>
+            </div>
+            <span class="text-muted">$120</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Tercer producto</h6>
+              <small class="text-muted"> 2 Arbusto Redondo</small>
+            </div>
+            <span class="text-muted">$200</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Codigo Promocional</h6>
+              <small>Primera Compra</small>
+            </div>
+            <span class="text-success">−$50</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (MX)</span>
+            <strong>$470</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Codigo Promocional">
+            <button type="submit" class="btn btn-secondary">Aceptar</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Datos personales para envio</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nombre Completo</label>
+              <input type="text" class="form-control" id="Nombre" placeholder="Nombre" value="" required>
+              <div class="invalid-feedback">
+                Se requiere un nombre válido.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Apellido Completo</label>
+              <input type="text" class="form-control" id="Apellido" placeholder="Apellido" value="" required>
+              <div class="invalid-feedback">
+                Se requiere apellido válido.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Usuario</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="Usuario" placeholder="Usuario" required>
+              <div class="invalid-feedback">
+                Su nombre de usuario es requerido.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted">(Requerido)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="nombre.sud@ejemplo.com">
+              <div class="invalid-feedback">
+                Ingrese una dirección de correo electrónico válida para actualizaciones de envío.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="address" placeholder="calle 928 ejemplo" required>
+              <div class="invalid-feedback">
+                Por favor introduzca su direccion de envio.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Dirección 2 <span class="text-muted">(Opcional)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="calle 36 ejemplo">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">País</label>
+              <select class="form-select" id="country" required>
+                <option value="">Elegir...</option>
+                <option>México</option>
+              </select>
+              <div class="invalid-feedback">
+                Seleccione un país válido.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Estado</label>
+              <select class="form-select" id="state" required>
+                <option value="">Elegir...</option>
+                <option>Yucatan</option>
+              </select>
+              <div class="invalid-feedback">
+                Proporcione un estado válido.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Codigo postal</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <div class="invalid-feedback">
+                Codigo postal requerido.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address">La dirección de envío es la misma que mi dirección de facturación</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">Guarda esta información para la próxima vez</label>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Metodo de Pago</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Tarjeta de crédito</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="debit">Tarjeta de débito</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Nombre del titular de la tarjeta</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">Nombre completo del titular de la tarjeta</small>
+              <div class="invalid-feedback">
+                Se requiere el nombre titular de la tarjeta
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Número de Tarjeta de Crédito</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+                Se requiere número de tarjeta de crédito
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Vencimiento</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+              <div class="invalid-feedback">
+                Fecha de vencimiento requerida
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+              <div class="invalid-feedback">
+                Código de seguridad requerido
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-dark btn-lg bg-white" type="submit">Continuar con la compra</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2022 JBR</p>
+    <p class="mb-1">Evelyn De La Rosa &copy; Harold Isaac Avila Mendez </p>
+    <ul class="list-inline">
+      <p class="float-end mb-1">
+      
+        <a href="Catalogo.html">Regresar</a>
+      </p>
+    </ul>
+  </footer>
+</div>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="form-compra.js"></script>
+  </body>
+</html>
